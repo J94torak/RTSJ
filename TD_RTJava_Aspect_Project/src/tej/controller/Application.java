@@ -28,9 +28,9 @@ public class Application
     
     ReleaseParameters releaseParam = new PeriodicParameters(
         new RelativeTime(), // Start at .start()
-        new RelativeTime( ..., 0), // PERIOD
+        new RelativeTime( 2000, 0), // PERIOD
         null, // COST
-        new RelativeTime(...,0), //DEADLINE
+        new RelativeTime(700,0), //DEADLINE
         null, // no overrun handler
         null); // no miss handler
         
@@ -80,11 +80,11 @@ public class Application
 	}
 
     
-//    try{
-//    	rtPeriodic.join();
-//    	
-// 
-//    }catch(Exception e){}; 
+   /*try{
+   	rtPeriodic.join();
+    	
+
+    }catch(Exception e){}; */
   
   }
 }

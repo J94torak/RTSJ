@@ -1,0 +1,27 @@
+package tej.aspectj;
+
+import javax.realtime.AbsoluteTime;
+import javax.realtime.Clock;
+import javax.realtime.RelativeTime;
+
+public aspect TimedLogging {
+	
+	public volatile AbsoluteTime start_time, t_time ;
+	RelativeTime delta_time;
+	public volatile Clock clk = Clock.getRealtimeClock();
+	
+	// A COMPLETER...
+	pointcut ptc(): set(int tej.controller.Tache_Compteur.compteur);
+	pointcut ptcTache():execution(tej.controller.Tache_Compteur.run()));
+
+	after() : ptc(){
+		
+		
+	}
+
+
+
+
+
+
+}

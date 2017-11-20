@@ -15,23 +15,18 @@ public class Tache_Compteur extends RealtimeThread
   
   public void run()
   {
-	  
+	  while(true){
 	  System.out.println("debut de la tache");
-	  while(true)
-	  {
+	  do{
+		  compteur++;
 		  
 		  
-		  // A COMPLETER...
-		  
-		  if(++cycle>25){
-			  	System.out.println("Temps trop grand");
-			  	break;
-		  }
-		 
-		  
+	  }while (waitForNextPeriod());
+	  
+		  System.out.println("Depassement d'echeance !");
 	  }
 		  
-	  System.out.println("fin de la tache");
+	  //System.out.println("fin de la tache");
   } 
 }
 
