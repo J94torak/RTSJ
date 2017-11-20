@@ -29,4 +29,3 @@ public class Tache_Compteur extends RealtimeThread
 	  //System.out.println("fin de la tache");
   } 
 }
-

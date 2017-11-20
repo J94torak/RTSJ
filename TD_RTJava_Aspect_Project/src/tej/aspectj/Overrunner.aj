@@ -7,14 +7,14 @@ public aspect Overrunner {
 	RelativeTime DELAY_INC = new RelativeTime(100,0);
 	RelativeTime delay= new RelativeTime (DELAY_INC);
 	
-	pointcut ptc():set(int tej.controller.Tache_Compteur.compteur) && withincode(void tej.controller.Tache_Compteur.run());
+	pointcut ptc():set(int tej.controller.Tache_Compteur.compteur) &&withincode(void tej.controller.Tache_Compteur.run());
 	// COMPLETER...
 	
 	before() :ptc(){
 		ralentir();
 	}
 	
-	// Traitement pour ralentir progressivement la t�che
+	// Traitement pour ralentir progressivement la tache
 	public void ralentir(){
 		try {
 			System.out.print("ralentir... \t");
