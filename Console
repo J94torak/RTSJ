@@ -1,0 +1,29 @@
+<Aspect Preambule/> Hello RT world!
+<Application>/ Jeu de taches ordonnancables ...
+debut de la tache
+ralentir... 	<TimedLogging>: 	 Compteur=1
+ 	 delai=100ms
+ralentir... 	<TimedLogging>: 	 Compteur=2
+ 	 delai=2196ms
+^[ralentir... 	<TimedLogging>: 	 Compteur=3
+ 	 delai=4295ms
+ralentir... 	
+Keyboard input received
+Keyboard Handler 	 
+Entree clavier = 	
+<TimedLogging>: 	 Compteur=4
+ 	 delai=6396ms
+ralentir... 	<TimedLogging>: 	 Compteur=5
+ 	 delai=8496ms
+ralentir... 	<TimedLogging>: 	 Compteur=6
+ 	 delai=10596ms
+ralentir... 	<TimedLogging>: 	 Compteur=7
+ 	 delai=12696ms
+Depassement d'echeance !
+debut de la tache
+ralentir... 	QUIT<TimedLogging>: 	 Compteur=8
+ 	 delai=13496ms
+
+Keyboard input received
+Keyboard Handler 	 
+Entree clavier = QUIT	
