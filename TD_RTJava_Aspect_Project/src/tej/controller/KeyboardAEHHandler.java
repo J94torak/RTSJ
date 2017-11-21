@@ -19,12 +19,10 @@ public class KeyboardAEHHandler extends AsyncEventHandler{
         System.out.println("Keyboard Handler \t ");
 	    System.out.println("Entree clavier = " + entree + "\t");
        
-        // A COMPLETER...
-        
-        
-        
-        
-         
+        if(entree.equals(new String("QUIT"))||entree.equals(new String("q"))||entree.equals(new String("Q"))){
+        	System.exit(0);
+        }
+                 
         // Permet la reprise de la tache preemptee (th) par ce AEH
         // Cas missHandler ou OverrunHandler par exemple
         th.schedulePeriodic(); // Let the thread continue

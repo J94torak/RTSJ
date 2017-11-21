@@ -6,6 +6,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import javax.realtime.AsyncEvent;
 import javax.realtime.PeriodicParameters;
 import javax.realtime.PriorityParameters;
 import javax.realtime.PriorityScheduler;
@@ -53,10 +54,9 @@ public class Application
 	// Creation AEH
 	KeyboardAEHHandler clavierHandler = new KeyboardAEHHandler();
 	clavierHandler.setThread(rtPeriodic);
+	AsyncEvent clavierEvent=new AsyncEvent();
+	clavierEvent.addHandler(clavierHandler);
 	
-	// A COMPLETER...
-	
-
     InputStreamReader isr;
 	BufferedReader br;
 
@@ -70,10 +70,7 @@ public class Application
 		   buffer = br.readLine();		      
 		   System.out.println("Keyboard input received");
 		   clavierHandler.setEntree(buffer);
-		   
-		   
-		   // A COMPLETER...
-		   
+		   clavierEvent.fire();
 		  
 		
 		} catch (IOException ioe) { }

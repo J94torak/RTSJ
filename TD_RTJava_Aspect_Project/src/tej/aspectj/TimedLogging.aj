@@ -11,7 +11,7 @@ public aspect TimedLogging {
 	public volatile Clock clk = Clock.getRealtimeClock();
 	
 	// A COMPLETER...
-	pointcut ptc(int compteur): set(int tej.controller.Tache_Compteur.compteur)&&args(compteur);
+	pointcut ptc(int compteur): set(int tej.controller.Tache_Compteur.compteur)&&args(compteur)&& withincode( void tej.controller.Tache_Compteur.run());
 	pointcut ptcTache():execution(void tej.controller.Tache_Compteur.run());
 
 	before(): ptcTache(){
